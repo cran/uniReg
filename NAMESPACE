@@ -1,0 +1,7 @@
+export(unireg,unimat,equiknots)
+importFrom(splines, spline.des)
+importFrom(quadprog, solve.QP)
+importFrom(mvtnorm, pmvnorm)
+importFrom(SEL, knotave)
+import(DoseFinding)
+import(MASS)
