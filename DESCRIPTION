@@ -1,15 +1,16 @@
 Package: uniReg
 Type: Package
-Title: Unimodal penalized spline regression using B-splines
-Version: 1.0
-Date: 2014-04-28
+Title: Unimodal Penalized Spline Regression using B-Splines
+Version: 1.1
+Date: 2016-06-05
 Author: Claudia Koellmann
 Maintainer: Claudia Koellmann <koellmann@statistik.tu-dortmund.de>
-Imports: DoseFinding, MASS, mvtnorm, quadprog, SEL, splines
+Imports: DoseFinding, graphics, MASS, parallel, stats, mvtnorm,
+        quadprog, SEL, splines
 Description: Univariate spline regression. It is possible to add the shape constraint of unimodality and predefined or
 	self-defined penalties on the B-spline coefficients.
-License: GPL (>= 2)
-Packaged: 2014-04-28 19:44:38 UTC; koellman
+License: GPL (>= 3)
 NeedsCompilation: no
+Packaged: 2016-06-05 21:03:32 UTC; koellman
 Repository: CRAN
-Date/Publication: 2014-04-29 07:59:12
+Date/Publication: 2016-06-06 06:39:59

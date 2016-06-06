@@ -4,7 +4,7 @@
 \title{Determine the knot sequence.
 %%  ~~function to do ... ~~
 }
-\description{Determines \emph{g+2k+2} knots for the spline basis. The inner knots lie equidistant in \eqn{[a,b]}. If \code{coinc=T}, \emph{k} knots are equal to each \emph{a} and \emph{b}, otherwise the outer knots are also equidistant beyond \eqn{[a,b]}.
+\description{Determines \emph{g+2k+2} knots for the spline basis of degree \emph{k} on the interval \eqn{[a,b]}. The \emph{g} inner knots lie equidistant in \eqn{[a,b]}. If \code{coinc=TRUE}, the outer knots (\emph{k} on each side of the interval) are placed coincident with \emph{a} and \emph{b}, otherwise the outer knots are also equidistant beyond \eqn{[a,b]}. 
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
@@ -12,19 +12,19 @@ equiknots(a, b, g, k, coinc)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{a}{Left boundary of the spline interval.
+  \item{a}{Left numeric boundary of the spline interval.
 %%     ~~Describe \code{a} here~~
 }
-  \item{b}{Right boundary of the spline interval.
+  \item{b}{Right numeric boundary of the spline interval.
 %%     ~~Describe \code{b} here~~
 }
-  \item{g}{Number of inner knots.
+  \item{g}{A non-negative integer giving the number of inner knots.
 %%     ~~Describe \code{g} here~~
 }
-  \item{k}{Spline degree.
+  \item{k}{A non-negative integer specifying the degree of the spline basis.
 %%     ~~Describe \code{k} here~~
 }
-  \item{coinc}{Should the outer knots be coincident or not? If \code{coinc=TRUE}, there are \emph{k} coincident outer knots at each \emph{a} and \emph{b}.
+  \item{coinc}{Logical indicating, if the outer knots should be coincident with the boundary knots or not. If \code{coinc=TRUE}, there are \emph{k} coincident outer knots at \emph{a} as well as at \emph{b}.
 %%     ~~Describe \code{coinc} here~~
 }
 }
@@ -56,22 +56,6 @@ equiknots(a, b, g, k, coinc)
 \examples{
 equiknots(0,5,3,3,TRUE)
 equiknots(0,5,3,3,FALSE)
-%
-%## The function is currently defined as
-%function (a, b, g, k, coinc) 
-%{
-%    inner <- seq(a, b, length.out = g + 2)
-%    if (coinc == T) {
-%        outera <- rep(a, k)
-%        outerb <- rep(b, k)
-%    }
-%    else {
-%        width <- (b - a)/(g + 1)
-%        outera <- a - (k:1 * width)
-%        outerb <- b + (1:k * width)
-%    }
-%    return(c(outera, inner, outerb))
-%  }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
